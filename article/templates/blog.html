@@ -1,0 +1,526 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block main %}
+
+
+
+
+<!-- end header code -->
+
+<!-- start breadcroumb -->
+
+<div class="bread-crumb py-4">
+    <div class="container-fluid">
+        <nav aria-label="breadcrumb" class="my-lg-0 my-2">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="#" class="font-14 text-muted-two">خانه</a></li>
+                <li class="breadcrumb-item"><a href="#" class="font-14 text-muted-two">فروشگاه</a></li>
+                <li class="breadcrumb-item"><a href="#" class="font-14 text-muted-two">گوشی هوشمند</a></li>
+                <li class="breadcrumb-item active main-color-one-color font-14 fw-bold" aria-current="page">گوشی شیائومی
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<!-- end breadcroumb -->
+
+<!-- main content page -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="blog-heeader">
+            <div class="row gy-3">
+                <div class="col-md-8">
+                    <div class="blog-header-title slider-title-desc">
+                        <h2 class="">وبلاگ <span class="main-color-one-color title-font">شاهان</span></h2>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="header-form">
+                        <form action="">
+                            <input type="search" class="form-control input-search" placeholder="جستجوی محصول">
+                            <button type="submit" class="btn input-btn-search"><i class="bi bi-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blog-menu my-4 d-lg-block d-none">
+            <div class="content-box py-2">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <div class="blog-menu-items">
+                                <nav class="navbar navbar-expand">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item"><a href="" class="nav-link border-animate fromRight">ویدیو های معرفی محصول</a></li>
+                                        <li class="nav-item"><a href="" class="nav-link border-animate fromRight">آموزش</a></li>
+                                        <li class="nav-item parent-blog-menu-level-2"><a href="" class="nav-link border-animate fromRight">خلاقیت <i class="bi font-12 ms-1 bi-chevron-down"></i></a>
+                                            <ul class="navbar-nav flex-column blog-menu-level-2">
+                                                <li class="nav-item"><a href="" class="nav-link">منو شماره 1</a></li>
+                                                <li class="nav-item"><a href="" class="nav-link">منو شماره 2</a></li>
+                                                <li class="nav-item parent-blog-menu-level-3"><a href="" class="nav-link"> <i class="bi bi-chevron-left font-12"></i> منو شماره 3</a>
+
+                                                    <ul class="navbar-nav flex-column blog-menu-level-3">
+                                                        <li class="nav-item"><a href="" class="nav-link">منو شماره 1</a></li>
+                                                        <li class="nav-item"><a href="" class="nav-link">منو شماره 2</a></li>
+                                                        <li class="nav-item"><a href="" class="nav-link">  منو شماره 3</a></li>
+                                                    </ul>
+
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item"><a href="" class="nav-link border-animate fromRight">تکنولوژی</a></li>
+                                        <li class="nav-item"><a href="" class="nav-link border-animate fromRight">کریپتوگرافی</a></li>
+                                        <li class="nav-item"><a href="" class="nav-link border-animate fromRight">رمزنگاری</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="blog-menu-social">
+                                <nav class="navbar navbar-expand justify-content-end">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item"><a href="" class="nav-link text-muted-two"><i class="bi bi-instagram"></i></a></li>
+                                        <li class="nav-item"><a href="" class="nav-link text-muted-two"><i class="bi bi-twitter"></i></a></li>
+                                        <li class="nav-item"><a href="" class="nav-link text-muted-two"><i class="bi bi-linkedin"></i></a></li>
+                                        <li class="nav-item"><a href="" class="nav-link text-muted-two"><i class="bi bi-telegram"></i></a></li>
+                                        <li class="nav-item"><a href="" class="nav-link text-muted-two"><i class="bi bi-whatsapp"></i></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blog-menu-responsive d-lg-none d-block mt-4">
+            <div class="content-box">
+                <div class="container-fluid">
+                    <div class="blog-menu-responsive-menu responsive-menu">
+                        <ul class="rm-item-menu navbar-nav">
+                            <li class="nav-item bg-ul-f7"><a href="index.html" class="nav-link">ویدیو معرفی محصول</a>
+                            </li>
+                            <li class="nav-item bg-ul-f7">
+                                <a href="" class="nav-link">آموزش</a>
+                            </li>
+                            <li class="nav-item bg-ul-f7">
+                                <a href="" class="nav-link">خلاقیت</a>
+                                <span class="showSubMenu"><i class="bi bi-chevron-left"></i></span>
+                                <ul class="navbar-nav h-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="">منو شماره 1</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="">منو شماره 2</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="">منو شماره 3</a>
+                                        <span class="showSubMenu"><i class="bi bi-chevron-left"></i></span>
+                                        <ul class="navbar-nav h-0 bg-ul-f7">
+                                            <li class="nav-item"><a href="" class="nav-link">منو شماره 1</a></li>
+                                            <li class="nav-item"><a href="" class="nav-link">منو شماره 2</a>
+                                            </li>
+                                            <li class="nav-item"><a href="" class="nav-link">منو شماره 3</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item bg-ul-f7">
+                                <a href="" class="nav-link">تکنولوژی</a>
+                            </li>
+                            <li class="nav-item bg-ul-f7">
+                                <a href="" class="nav-link">کریپتو گرافی</a>
+                            </li>
+                            <li class="nav-item bg-ul-f7">
+                                <a href="" class="nav-link">رمز نگاری</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end main content page -->
+
+<!-- blog -->
+
+<div class="blog-slider blog-post py-30">
+    <div class="container-fluid">
+        <div class="slider-title">
+            <div class="slider-title-desc">
+                <div class="slider-title-title">
+                    <h2 class="h1"><span class="title-font main-color-one-color">مقالات</span> وبلاگ</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog-slider-items mt-3">
+            <div class="row gy-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="row gy-5">
+                        <div class="col-md-6">
+                            <div class="blog-slider-item-stand">
+                                <a href="">
+                                    <span class="blog-slider-overlay"></span>
+                                    <div class="blog-slider-item-stand-image">
+                                        <img src="{% static "img/blog-1.jpg" %}" alt="">
+                                    </div>
+                                    <div class="blog-slider-item-stand-text">
+                                        <div class="blog-slider-item-stand-title">
+                                            <span class="badge badge-pill main-color-two-bg mb-2">جدید ترین ها</span>
+                                            <h6 class="font-16 title-font text-overflow-1 text-white">راهنمای خرید موبایل آبان 1402</h6>
+                                            <p class="text-overflow-2 text-white mb-0 mt-2">رید گوشی موبایل مانند هر وسیله دیگری، نیازمند تحقیق و کسب اطلاعات کافی است. ما در این راهنمای خرید سعی می‌کنیم تا بهترین محصولات بازار را معرفی کنیم و حتی به صورت اختصاصی</p>
+                                            <div class="blog-slider-item-info d-flex align-items-center justify-content-between">
+                                                <div class="blog-slider-item-info-item me-2 text-white">
+                                                    <i class="bi bi-clock me-1"></i>
+                                                    <span class="text-white">2 روز پیش نوشته شده</span>
+                                                </div>
+                                                <div class="blog-slider-item-info-item text-white">
+                                                    <i class="bi bi-eye me-1"></i>
+                                                    <span class="text-white">17 بازدید</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="blog-slider-item-stand">
+                                <a href="">
+                                    <span class="blog-slider-overlay"></span>
+                                    <div class="blog-slider-item-stand-image">
+                                        <img src="{% static "img/blog-3.jpg" %}" alt="">
+                                    </div>
+                                    <div class="blog-slider-item-stand-text">
+                                        <div class="blog-slider-item-stand-title">
+                                            <span class="badge badge-pill main-color-two-bg mb-2">جدید ترین ها</span>
+                                            <h6 class="font-16 title-font text-overflow-1 text-white">راهنمای خرید موبایل آبان 1402</h6>
+                                            <p class="text-overflow-2 text-white mb-0 mt-2">رید گوشی موبایل مانند هر وسیله دیگری، نیازمند تحقیق و کسب اطلاعات کافی است. ما در این راهنمای خرید سعی می‌کنیم تا بهترین محصولات بازار را معرفی کنیم و حتی به صورت اختصاصی</p>
+                                            <div class="blog-slider-item-info d-flex align-items-center justify-content-between">
+                                                <div class="blog-slider-item-info-item me-2 text-white">
+                                                    <i class="bi bi-clock me-1"></i>
+                                                    <span class="text-white">2 روز پیش نوشته شده</span>
+                                                </div>
+                                                <div class="blog-slider-item-info-item text-white">
+                                                    <i class="bi bi-eye me-1"></i>
+                                                    <span class="text-white">17 بازدید</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="blog-slider-item-row">
+                        <a href="">
+                            <div class="row gy-3 align-items-center">
+                                <div class="col-sm-4">
+                                    <div class="blog-slider-item-row-image">
+                                        <img src="{% static "img/blog-4.jpg" %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="blog-slider-item-stand-text">
+                                        <div class="blog-slider-item-stand-title">
+                                            <h6 class="font-16 title-font text-overflow-1 main-color-one-color">راهنمای خرید موبایل آبان 1402</h6>
+                                            <p class="text-overflow-2 my-2">رید گوشی موبایل مانند هر وسیله دیگری، نیازمند تحقیق و کسب اطلاعات کافی است. ما در این راهنمای خرید سعی می‌کنیم تا بهترین محصولات بازار را معرفی کنیم و حتی به صورت اختصاصی</p>
+                                            <div class="blog-slider-item-info d-flex align-items-center">
+                                                <div class="blog-slider-item-info-item me-3">
+                                                    <i class="bi bi-clock me-1"></i>
+                                                    <span>2 روز پیش نوشته شده</span>
+                                                </div>
+                                                <div class="blog-slider-item-info-item">
+                                                    <i class="bi bi-eye me-1"></i>
+                                                    <span>17 بازدید</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="blog-slider-item-row">
+                        <a href="">
+                            <div class="row gy-3 align-items-center">
+                                <div class="col-sm-4">
+                                    <div class="blog-slider-item-row-image">
+                                        <img src="{% static "img/blog-6.jpg" %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="blog-slider-item-stand-text">
+                                        <div class="blog-slider-item-stand-title">
+                                            <h6 class="font-16 title-font text-overflow-1 main-color-one-color">راهنمای خرید موبایل آبان 1402</h6>
+                                            <p class="text-overflow-2 my-2">رید گوشی موبایل مانند هر وسیله دیگری، نیازمند تحقیق و کسب اطلاعات کافی است. ما در این راهنمای خرید سعی می‌کنیم تا بهترین محصولات بازار را معرفی کنیم و حتی به صورت اختصاصی</p>
+                                            <div class="blog-slider-item-info d-flex align-items-center">
+                                                <div class="blog-slider-item-info-item me-3">
+                                                    <i class="bi bi-clock me-1"></i>
+                                                    <span>2 روز پیش نوشته شده</span>
+                                                </div>
+                                                <div class="blog-slider-item-info-item">
+                                                    <i class="bi bi-eye me-1"></i>
+                                                    <span>17 بازدید</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% comment %} <div class="advert-banner d-sm-block d-none py-40 my-5">
+            <div class="container-fluid">
+                <div class="row g-3 align-items-center">
+
+                    <div class="col-12">
+                        <div class="advert-banner-item img-tilt" data-tilt>
+                            <a href="">
+                                <img src="{% static "img/advert-6.webp" %}" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div> {% endcomment %}
+
+        <!-- end advert banner -->
+
+        <div class="blogs-items my-5">
+            <div class="row gy-5">
+                <div class="col-lg-6">
+                    <div class="blog-slider-item-row">
+                        <a href="">
+                            <div class="row gy-3 align-items-center">
+                                <div class="col-sm-4">
+                                    <div class="blog-slider-item-row-image">
+                                        <img src="{% static "img/blog-1.jpg" %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="blog-slider-item-stand-text">
+                                        <div class="blog-slider-item-stand-title">
+                                            <h6 class="font-16 title-font text-overflow-1 main-color-one-color">راهنمای خرید موبایل آبان 1402</h6>
+                                            <p class="text-overflow-2 my-2">رید گوشی موبایل مانند هر وسیله دیگری، نیازمند تحقیق و کسب اطلاعات کافی است. ما در این راهنمای خرید سعی می‌کنیم تا بهترین محصولات بازار را معرفی کنیم و حتی به صورت اختصاصی</p>
+                                            <div class="blog-slider-item-info d-flex align-items-center">
+                                                <div class="blog-slider-item-info-item me-3">
+                                                    <i class="bi bi-clock me-1"></i>
+                                                    <span>2 روز پیش نوشته شده</span>
+                                                </div>
+                                                <div class="blog-slider-item-info-item">
+                                                    <i class="bi bi-eye me-1"></i>
+                                                    <span>17 بازدید</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="blog-slider-item-row">
+                        <a href="">
+                            <div class="row gy-3 align-items-center">
+                                <div class="col-sm-4">
+                                    <div class="blog-slider-item-row-image">
+                                        <img src="{% static "img/blog-2.jpg" %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="blog-slider-item-stand-text">
+                                        <div class="blog-slider-item-stand-title">
+                                            <h6 class="font-16 title-font text-overflow-1 main-color-one-color">راهنمای خرید موبایل آبان 1402</h6>
+                                            <p class="text-overflow-2 my-2">رید گوشی موبایل مانند هر وسیله دیگری، نیازمند تحقیق و کسب اطلاعات کافی است. ما در این راهنمای خرید سعی می‌کنیم تا بهترین محصولات بازار را معرفی کنیم و حتی به صورت اختصاصی</p>
+                                            <div class="blog-slider-item-info d-flex align-items-center">
+                                                <div class="blog-slider-item-info-item me-3">
+                                                    <i class="bi bi-clock me-1"></i>
+                                                    <span>2 روز پیش نوشته شده</span>
+                                                </div>
+                                                <div class="blog-slider-item-info-item">
+                                                    <i class="bi bi-eye me-1"></i>
+                                                    <span>17 بازدید</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="blog-slider-item-row">
+                        <a href="">
+                            <div class="row gy-3 align-items-center">
+                                <div class="col-sm-4">
+                                    <div class="blog-slider-item-row-image">
+                                        <img src="{% static "img/blog-2.jpg" %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="blog-slider-item-stand-text">
+                                        <div class="blog-slider-item-stand-title">
+                                            <h6 class="font-16 title-font text-overflow-1 main-color-one-color">راهنمای خرید موبایل آبان 1402</h6>
+                                            <p class="text-overflow-2 my-2">رید گوشی موبایل مانند هر وسیله دیگری، نیازمند تحقیق و کسب اطلاعات کافی است. ما در این راهنمای خرید سعی می‌کنیم تا بهترین محصولات بازار را معرفی کنیم و حتی به صورت اختصاصی</p>
+                                            <div class="blog-slider-item-info d-flex align-items-center">
+                                                <div class="blog-slider-item-info-item me-3">
+                                                    <i class="bi bi-clock me-1"></i>
+                                                    <span>2 روز پیش نوشته شده</span>
+                                                </div>
+                                                <div class="blog-slider-item-info-item">
+                                                    <i class="bi bi-eye me-1"></i>
+                                                    <span>17 بازدید</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="blog-slider-item-row">
+                        <a href="">
+                            <div class="row gy-3 align-items-center">
+                                <div class="col-sm-4">
+                                    <div class="blog-slider-item-row-image">
+                                        <img src="{% static "img/blog-1.jpg" %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="blog-slider-item-stand-text">
+                                        <div class="blog-slider-item-stand-title">
+                                            <h6 class="font-16 title-font text-overflow-1 main-color-one-color">راهنمای خرید موبایل آبان 1402</h6>
+                                            <p class="text-overflow-2 my-2">رید گوشی موبایل مانند هر وسیله دیگری، نیازمند تحقیق و کسب اطلاعات کافی است. ما در این راهنمای خرید سعی می‌کنیم تا بهترین محصولات بازار را معرفی کنیم و حتی به صورت اختصاصی</p>
+                                            <div class="blog-slider-item-info d-flex align-items-center">
+                                                <div class="blog-slider-item-info-item me-3">
+                                                    <i class="bi bi-clock me-1"></i>
+                                                    <span>2 روز پیش نوشته شده</span>
+                                                </div>
+                                                <div class="blog-slider-item-info-item">
+                                                    <i class="bi bi-eye me-1"></i>
+                                                    <span>17 بازدید</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="blog-slider-item-row">
+                        <a href="">
+                            <div class="row gy-3 align-items-center">
+                                <div class="col-sm-4">
+                                    <div class="blog-slider-item-row-image">
+                                        <img src="{% static "img/blog-6.jpg" %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="blog-slider-item-stand-text">
+                                        <div class="blog-slider-item-stand-title">
+                                            <h6 class="font-16 title-font text-overflow-1 main-color-one-color">راهنمای خرید موبایل آبان 1402</h6>
+                                            <p class="text-overflow-2 my-2">رید گوشی موبایل مانند هر وسیله دیگری، نیازمند تحقیق و کسب اطلاعات کافی است. ما در این راهنمای خرید سعی می‌کنیم تا بهترین محصولات بازار را معرفی کنیم و حتی به صورت اختصاصی</p>
+                                            <div class="blog-slider-item-info d-flex align-items-center">
+                                                <div class="blog-slider-item-info-item me-3">
+                                                    <i class="bi bi-clock me-1"></i>
+                                                    <span>2 روز پیش نوشته شده</span>
+                                                </div>
+                                                <div class="blog-slider-item-info-item">
+                                                    <i class="bi bi-eye me-1"></i>
+                                                    <span>17 بازدید</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="blog-slider-item-row">
+                        <a href="">
+                            <div class="row gy-3 align-items-center">
+                                <div class="col-sm-4">
+                                    <div class="blog-slider-item-row-image">
+                                        <img src="{% static "img/blog-5.jpg" %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="blog-slider-item-stand-text">
+                                        <div class="blog-slider-item-stand-title">
+                                            <h6 class="font-16 title-font text-overflow-1 main-color-one-color">راهنمای خرید موبایل آبان 1402</h6>
+                                            <p class="text-overflow-2 my-2">رید گوشی موبایل مانند هر وسیله دیگری، نیازمند تحقیق و کسب اطلاعات کافی است. ما در این راهنمای خرید سعی می‌کنیم تا بهترین محصولات بازار را معرفی کنیم و حتی به صورت اختصاصی</p>
+                                            <div class="blog-slider-item-info d-flex align-items-center">
+                                                <div class="blog-slider-item-info-item me-3">
+                                                    <i class="bi bi-clock me-1"></i>
+                                                    <span>2 روز پیش نوشته شده</span>
+                                                </div>
+                                                <div class="blog-slider-item-info-item">
+                                                    <i class="bi bi-eye me-1"></i>
+                                                    <span>17 بازدید</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /blog-items -->
+    </div>
+</div>
+
+<!-- end blog -->
+
+<div class="my-paginate mt-5">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link rounded-3" href="#"><i class="bi bi-chevron-right"></i></a>
+            </li>
+            <li class="page-item active"><a class="page-link rounded-3" href="#">1</a></li>
+            <li class="page-item"><a class="page-link rounded-3" href="#">2</a></li>
+            <li class="page-item"><a class="page-link rounded-3" href="#">3</a></li>
+            <li class="page-item"><a class="page-link rounded-3" href="#">...</a></li>
+            <li class="page-item"><a class="page-link rounded-3" href="#">14</a></li>
+            <li class="page-item"><a class="page-link rounded-3" href="#">15</a></li>
+            <li class="page-item"><a class="page-link rounded-3" href="#">16</a></li>
+            <li class="page-item">
+                <a class="page-link rounded-3" href="#"><i class="bi bi-chevron-left"></i></a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<!-- end paginate -->
+
+
+
+{% endblock main %}
+
+

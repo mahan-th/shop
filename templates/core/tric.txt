@@ -1,0 +1,27 @@
+(assets\/.*\.js)
+
+{% static "$1" %}
+
+
+
+{% if request.GET.q %}
+    <input type="hidden" name="q" value="{{ request.GET.q }}">
+{% endif %}
+<div class="col-6">
+    <input  type="number" name="start_range"  
+           class="form-control input-range-filter"
+           placeholder="از 1500000">
+</div>
+<div class="col-6">
+    <input type="number"  name="end_range" 
+           class="form-control input-range-filter"
+           placeholder="از 3000000">
+</div>
+<div class="col-12">
+    <div class="text-center my-3">
+        <input type="submit" class="btn main-color-green text-white rounded-pill px-5 py-2" value="اعمال فیلتر">
+    </div>
+</div> 
+{% comment %} <div class="form-group">
+    <input type="range" class="catRange" name="range">
+ </div> 
