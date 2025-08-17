@@ -56,7 +56,7 @@ class ProductImage(models.Model):
     product =  models.ForeignKey(Product,on_delete=models.CASCADE, related_name="images")
 
 
-class ProdctColler(models.Model):
+class ProdctPakage(models.Model):
     coler = models.CharField(max_length=50)
     price = models.IntegerField(default=0)
     product = models.ForeignKey(Product,on_delete=models.CASCADE)

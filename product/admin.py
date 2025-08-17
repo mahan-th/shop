@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import AttrbiuteProduct, Product, ProductImage, ProdctColler
+from .models import AttrbiuteProduct, Product, ProductImage, ProdctPakage
 
 class AttributeInline(admin.TabularInline):
     list_display = ['product__title','name','value']
@@ -14,7 +14,7 @@ class ProductImageInline(admin.TabularInline):
     extra = 1
 
 class ProductCollerInline(admin.TabularInline):
-    model = ProdctColler
+    model = ProdctPakage
     extra = 1
 
 class ProudctAdmin(admin.ModelAdmin):
@@ -28,5 +28,5 @@ admin.site.register(Product,ProudctAdmin)
 
 admin.site.register(ProductImage)
 admin.site.register(AttrbiuteProduct)
-admin.site.register(ProdctColler)
+admin.site.register(ProdctPakage)
 
