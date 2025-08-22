@@ -1,7 +1,9 @@
 from django.db import models
 from django.utils.text import slugify
+from django.db.models import F,ExpressionWrapper,DecimalField
+from django.db.models.signals import post_save , post_delete
+from django.dispatch import receiver
 
-# Create your models here.
 import os 
 import random
 
@@ -15,31 +17,49 @@ class Product(models.Model):
 
     title = models.CharField(max_length=100)
 
-    price = models.IntegerField()
-
-    final_price = models.IntegerField(default=0)
-    
-    discount = models.IntegerField(default=0)
-
     descriptions = models.TextField(blank=True)
-
-    creat_at = models.DateTimeField(auto_now=True)
-
-    is_avalible = models.BooleanField(default=True)
 
     image = models.ImageField(upload_to=upload_to_image)
 
-    slug = models.SlugField(unique=True,blank=True)
+    price = models.IntegerField(default=0)
+
+    coler = models.CharField(max_length=50)
+
+    discount = models.IntegerField(default=0)
+
+    final_price = models.IntegerField(default=0)
+
+    creat_at = models.DateTimeField(auto_now=True)
+
+    categories = models.ManyToManyField("Category",related_name='categories')
+    
+    slug = models.SlugField(unique=True,blank=True, allow_unicode=True)
 
     def __str__(self):
         return f"{self.title}"
     
     def save(self,*args,**kwargs):
+
         self.final_price = int(self.price - (self.price * self.discount/100))
         if not self.slug:
-            self.slug = slugify(self.title)
+            self.slug = slugify(self.title,allow_unicode=True)
+            
         return super().save(*args,**kwargs)
-    
+
+   
+class Category(models.Model):
+    title = models.CharField(max_length=100)
+    slug = models.SlugField(unique=True ,blank=True, allow_unicode=True)
+    parent = models.ForeignKey("self", on_delete=models.SET_NULL, null=True, blank=True, related_name="children")
+
+    def __str__(self):
+        return f'Category |{self.title}'
+
+    def save(self,*args,**kwargs):
+
+        if not self.slug:
+            self.slug = slugify(self.title,allow_unicode=True)
+        return super().save(*args,**kwargs)
 
 
 class AttrbiuteProduct(models.Model):
@@ -57,16 +77,28 @@ class ProductImage(models.Model):
 
 
 class ProdctPakage(models.Model):
-    coler = models.CharField(max_length=50)
-    price = models.IntegerField(default=0)
-    product = models.ForeignKey(Product,on_delete=models.CASCADE)
-    is_avalable = models.BooleanField(default=True)
 
-    def save(self,*args,**kwargs):
-        self.product.final_price = int(self.product.price + self.price)
-        return super().save(*args,**kwargs)
+    product = models.ForeignKey(Product,on_delete=models.CASCADE,related_name="pakages")
+
+    coler = models.CharField(max_length=50)
+
+    price = models.IntegerField(default=0)
+
+    final_price = models.IntegerField(default=0)
+
+    discount = models.IntegerField(default=0)
+
+    is_avalable = models.BooleanField(default=True)
+     
+    product_number = models.IntegerField(default=0)
     
 
+    def save(self,*args,**kwargs):
 
+        self.final_price = int(self.price - (self.price * self.discount/100))
+
+        return super().save(*args,**kwargs)
+
+ 
 
     

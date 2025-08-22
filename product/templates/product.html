@@ -314,7 +314,7 @@
                         </div>
                     </div>
 
-                    <div class="item-box shadow-box">
+                    {% comment %} <div class="item-box shadow-box">
                         <div class="title">
                             <div class="d-flex align-items-center justify-content-between">
                                 <h6 class="font-14">فیلتر بر اساس رنگ</h6>
@@ -376,9 +376,9 @@
                                 </form>
                             </div>
                         </div>
-                    </div>
+                    </div> {% endcomment %}
 
-                    <div class="item-box shadow-box">
+                    {% comment %} <div class="item-box shadow-box">
                         <div class="title">
                             <div class="d-flex align-items-center justify-content-between">
                                 <h6 class="font-14">فیلتر براساس رنگ</h6>
@@ -433,7 +433,7 @@
                                 </form>
                             </div>
                         </div>
-                    </div>
+                    </div> {% endcomment %}
 
                 </div>
             </div>
@@ -490,6 +490,10 @@
                     {% for i in product %}   
                         <div class="col-lg-4 col-sm-6">
                             <div class="product-box pro-shadow">
+                                {% if i.creat_at >= month_ago %}
+                                    <span class="new-product-ticket" style="position:absolute;top:10px;left:10px;z-index:2;background:#28a745;color:#fff;padding:2px 10px;border-radius:12px;font-size:13px;">new</span>
+                                {% endif %}
+                                
                                 
                                 <a href="/product/{{ i.id }}/{{ i.slug }}">
                                 {% comment %} <a href={% url "/product/ product.id / product.slug" %}> {% endcomment %}
@@ -528,6 +532,7 @@
                                                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                                                         data-bs-title="افزودن به علاقه ها"><i
                                                         class="bi bi-heart"></i></a></li>
+                                                
                                             </ul>
                                         </nav>
                                     </div>
