@@ -33,7 +33,7 @@ class Product(models.Model):
 
     categories = models.ManyToManyField("Category",related_name='categories')
     
-    slug = models.SlugField(unique=True,blank=True, allow_unicode=True)
+    slug = models.SlugField(unique=True,blank=True, max_length=500 ,allow_unicode=True)
 
     def __str__(self):
         return f"{self.title}"
@@ -42,7 +42,7 @@ class Product(models.Model):
 
         self.final_price = int(self.price - (self.price * self.discount/100))
         if not self.slug:
-            self.slug = slugify(self.title,allow_unicode=True)
+            self.slug = slugify(self.title)
             
         return super().save(*args,**kwargs)
 
@@ -56,7 +56,6 @@ class Category(models.Model):
         return f'Category |{self.title}'
 
     def save(self,*args,**kwargs):
-
         if not self.slug:
             self.slug = slugify(self.title,allow_unicode=True)
         return super().save(*args,**kwargs)
@@ -91,14 +90,18 @@ class ProdctPakage(models.Model):
     is_avalable = models.BooleanField(default=True)
      
     product_number = models.IntegerField(default=0)
-    
+
 
     def save(self,*args,**kwargs):
 
         self.final_price = int(self.price - (self.price * self.discount/100))
 
-        return super().save(*args,**kwargs)
+        super().save(*args,**kwargs)
 
- 
+
+
+
+    
+    
 
     

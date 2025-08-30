@@ -545,7 +545,7 @@
                     <nav aria-label="Page navigation example">
                         <ul class="pagination justify-content-center">
                             {% if product.has_previous %}
-                                <li class="page-item disabled">
+                                <li class="page-item ">
                                     <a class="page-link rounded-3" href="{{base_url}}page={{product.previous_page_number}}"><i class="bi bi-chevron-right"></i></a>
                                 </li>
                             {% endif %}
@@ -569,7 +569,4 @@
 </div>
 <!-- end main content page -->
 
-
-
 {% endblock main %}
-

@@ -40,7 +40,7 @@ def products(request, slug=None):
     else:
         products = products.order_by("-id")
 
-    paginator = Paginator(products,1)
+    paginator = Paginator(products,2)
     page_number = request.GET.get('page')
     products = paginator.get_page(page_number)
 
