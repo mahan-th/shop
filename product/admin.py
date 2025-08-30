@@ -23,7 +23,7 @@ class ProductCollerInline(admin.TabularInline):
 
 class ProudctAdmin(admin.ModelAdmin):
     list_display = ["title"]
-    inlines = [AttributeInline,ProductImageInline]
+    inlines = [AttributeInline,ProductImageInline,ProductCollerInline]
     exclude = ['final_price']
     filter_horizontal =("categories",)
     
@@ -35,5 +35,5 @@ admin.site.register(Product,ProudctAdmin)
 admin.site.register(ProductImage)
 admin.site.register(AttrbiuteProduct)
 admin.site.register(Category)
-# admin.site.register(ProdctPakage)
+admin.site.register(ProdctPakage)
 

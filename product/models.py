@@ -3,7 +3,7 @@ from django.utils.text import slugify
 from django.db.models import F,ExpressionWrapper,DecimalField
 from django.db.models.signals import post_save , post_delete
 from django.dispatch import receiver
-
+from django.db.models import Min
 import os 
 import random
 
@@ -77,9 +77,11 @@ class ProductImage(models.Model):
 
 class ProdctPakage(models.Model):
 
-    product = models.ForeignKey(Product,on_delete=models.CASCADE,related_name="pakages")
+    product = models.ForeignKey(Product,on_delete=models.CASCADE,related_name="product_packages")
 
     coler = models.CharField(max_length=50)
+
+    coler_hex = models.CharField(max_length=300)
 
     price = models.IntegerField(default=0)
 
@@ -97,11 +99,19 @@ class ProdctPakage(models.Model):
         self.final_price = int(self.price - (self.price * self.discount/100))
 
         super().save(*args,**kwargs)
+        min_pakage = self.product.product_packages.aggregate(Min('final_price'))['final_price__min']
+        if min_pakage != None and min_pakage != self.product.final_price:
+            self.product.price = self.price
+            self.product.discount = self.discount
+            self.product.final_price = min_pakage
+            self.product.save()
+
+
 
 
 
 
     
-    
+
 
     
