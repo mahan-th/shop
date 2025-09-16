@@ -23,8 +23,6 @@ class Product(models.Model):
 
     price = models.IntegerField(default=0)
 
-    coler = models.CharField(max_length=50)
-
     discount = models.IntegerField(default=0)
 
     final_price = models.IntegerField(default=0)
@@ -42,7 +40,7 @@ class Product(models.Model):
 
         self.final_price = int(self.price - (self.price * self.discount/100))
         if not self.slug:
-            self.slug = slugify(self.title)
+            self.slug = slugify(self.title,allow_unicode=True)
             
         return super().save(*args,**kwargs)
 
@@ -77,7 +75,7 @@ class ProductImage(models.Model):
 
 class ProdctPakage(models.Model):
 
-    product = models.ForeignKey(Product,on_delete=models.CASCADE,related_name="product_packages")
+    product = models.ForeignKey(Product,on_delete=models.CASCADE,related_name="packages")
 
     coler = models.CharField(max_length=50)
 
@@ -99,10 +97,11 @@ class ProdctPakage(models.Model):
         self.final_price = int(self.price - (self.price * self.discount/100))
 
         super().save(*args,**kwargs)
-        min_pakage = self.product.product_packages.aggregate(Min('final_price'))['final_price__min']
+        min_pakage = self.product.packages.aggregate(Min('final_price'))['final_price__min']
         if min_pakage != None and min_pakage != self.product.final_price:
             self.product.price = self.price
             self.product.discount = self.discount
+            
             self.product.final_price = min_pakage
             self.product.save()
 
